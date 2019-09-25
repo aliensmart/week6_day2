@@ -5,7 +5,64 @@
     <title>JavaScript program to calculate multiplication and division of two numbers </title>
     <style type="text/css">
     
-        /* Enter CSS styling here */
+        *{
+            box-sizing: border-box
+        }
+
+        body{
+            background: #051C2D;
+            font-size: 1.2rem;
+        }
+        .container{
+            position: absolute;
+            top:50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 2rem;
+            width: 50rem;
+            text-align: center;
+            background: #ffffff;
+            margin: 0 auto;
+        }
+        .input{
+            display: block;
+            border-radius: .5rem;
+            padding: 1rem;
+            margin-left: 18rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            transition: .5s;
+            border: 3px solid black;
+            
+        }
+        .input:focus{
+            background-color: rgb(5, 38, 63);
+            color: #ffffff;
+            outline: 0;
+            
+        }
+        .btn{
+            padding: .5rem;
+            background: rgb(1, 53, 94);
+            border: none;
+            border-radius: 5px;
+            color: #ffffff;
+            transition: .3s;
+            margin-bottom: 1rem;
+        }
+        .btn:hover{
+            box-shadow: 1px 5px 5px 0px rgba(0, 0, 0, .5)
+        }
+        .btn:active{
+            box-shadow: 1px 2px 5px 0px rgba(14, 13, 13, 0.5);
+            border: none;
+        }
+        .btn:focus {outline:0;}
+        form span{
+            padding: 1rem;
+        }
+        
 
     </style> 
 </head>
@@ -15,12 +72,38 @@
     then either multiplies or divides the two given values -->
 
     <!-- Enter HTML code here -->
-    
+    <div class="container">
+        <form>
+            <span class="inTex">Enter a number:</span>  <input type="text" id="num1" class="input"/>
+            <span class="inTex">Enter a second number:</span> <input type="text" id="num2" class="input"/>
+            <input type="button" class="btn" onclick="multip()" id="multiply" Value="multiply">
+            <input type="button" class="btn" onclick="divid()" id="divide" Value="divide">
+        </form>
+
+        <div class="result">
+            Your result is: <span id="result"></span>
+        </div>
+    </div>
+
 
 
 <script>
     
     // Enter JS code here
+    function multip(){
+        num1 = document.getElementById("num1").value;
+        num2 = document.getElementById("num2").value;
+
+        document.getElementById("result").innerHTML = num1 * num2;
+    }
+    function divid(){
+        num1 = document.getElementById("num1").value;
+        num2 = document.getElementById("num2").value;
+
+        document.getElementById("result").innerHTML = num1 / num2;
+    }
+
+
 
 </script>  
 </body>
