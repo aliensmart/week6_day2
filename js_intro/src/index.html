@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javascript Intro</title>
+</head>
+<body>
+
+    <header>
+        <h1>Sample Code</h1>
+        <p>Day2 of Javascript</p>
+    </header>
+    <form >
+        
+        Your First Name: <input type="text" class="input" id="catchPhrase"><br>
+        Your Last Name: <input type="text" class="input" id="catchPhrase2"><br>
+        <input type="button" class="button" onclick="displayPhrase()" value="catchPhrase">
+        <input type="button" class="button" onclick="combinePhrases()" value="catchPhrases">
+    </form>
+
+    <div class="phrase">
+        <strong>
+            <span id="phrase"></span>
+        </strong>
+    </div>
+
+    <script>
+
+        function displayPhrase(){
+            let phrase = document.getElementById("catchPhrase").value;
+            document.getElementById("phrase").innerHTML = phrase;
+        }
+        function combinePhrases(){
+            let phrase = document.getElementById("catchPhrase").value;
+            let phrase2 = document.getElementById("catchPhrase2").value;
+            combine = phrase + " " + phrase2;
+            document.getElementById("phrase").innerHTML = combine;
+        }
+
+    </script>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script class="Notes">
+        let username = "Greg";
+        let knowsJavascript = true;
+
+        if (knowsJavascript && username){
+            console.log(`Great + ${username} + ! Get ready to practice!`)
+        }else if(knowsJavascript){
+            console.log('Great! Get ready to practice')
+
+        }else if(username){
+            console.log(`Great, ${username}! get ready to practice`)
+        }else{
+            console.log("no condition is true")
+        }
+        console.log(knowsJavascript && username)
+
+
+        let isPhoneCharged = true;
+
+        if(!isPhoneCharged){
+            console.log("charge your phone")
+        }else{
+            console.log("no need to charge your phone")
+        }
+
+        let isLocked = false
+        //boolean ? code if true:code if false
+        isLocked ? console.log("you need a key to open this") : console.log("you can open the door now")
+
+        // let eigh
+        // }
+
+        function calculateBill(total, tax=0.13, tip=0.2){
+            return total + (total*tip) + (total*tax);
+        }
+
+        const  totalBill = calculateBill(100, undefined, 0.25)
+        console.log(`the total bill is ${totalBill}`)
+
+
+        const ages = [23, 34, 5,12,97,88, 45, 12, 13, 26,27]
+        function filterAge(age){
+            return age>=40
+        }
+        const old = ages.filter(age=>age>=40)
+        console.log(old)
+
+        const mapped = ages.map(age =>age/2)
+        console.log(mapped)
+
+    </script>
+</body>
+</html>

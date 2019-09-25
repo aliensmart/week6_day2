@@ -1,0 +1,28 @@
+div{
+    border: 1px solid orangered;
+    padding: 10px
+}
+/* h1{
+    color: rgb(255, 7, 123);
+} */
+
+header>*{
+    display: block;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+header{
+    background-color: whitesmoke
+}
+
+main{
+    min-height: 100px;
+}
+
+#output{
+    background-color: rgb(59, 59, 255);
+    width: 200px;
+    margin: 0 auto;
+    height: 100px;
+}
